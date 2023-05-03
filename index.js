@@ -17,7 +17,7 @@ window.addEventListener("click", (event) => {
     const projectile = new Projectile(
         player.x,
         player.y,
-        5,
+        7,
         "orange",
         velocity
     );
@@ -92,8 +92,7 @@ class Particle extends Enemy {
     }
   }
 
-const player = new Player(canvas.width / 2, canvas.height / 2, 10, "blue");
-
+const player = new Player(canvas.width / 2, canvas.height / 2, 15, "grey");
 const projectiles = [];
 const particles = [];
 const enemies = [];
@@ -200,6 +199,6 @@ function spawnEnemies() {
         };
 
         enemies.push(new Enemy(x, y, radius, color, velocity));
-    }, 1500);
+    }, 800);
 }
 spawnEnemies();
